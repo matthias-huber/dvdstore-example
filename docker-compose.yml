@@ -2,6 +2,9 @@ cmr:
   image: inspectit/cmr:latest
   ports:
    - "8182:8182"
+  volumes:
+   - ./environments:/CMR/custom/environments
+   - ./profiles:/CMR/custom/profiles
 dvdstore:
   image: inspectit/dvdstore
   links:
@@ -10,6 +13,7 @@ dvdstore:
    - "8080:8080"
   environment:
    - AGENT_NAME=dvdstore
+   - INSPECTIT_CMR_WAIT=60
 gui:
   image: inspectit/inspectit:latest
   environment:

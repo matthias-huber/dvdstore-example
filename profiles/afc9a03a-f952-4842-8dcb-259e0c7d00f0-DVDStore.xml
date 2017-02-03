@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profile xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" common="false" active="true" default="false" id="afc9a03a-f952-4842-8dcb-259e0c7d00f0" name="DVDStore" description="Profile for the DVD Store Demo Application" created-on="2017-02-03T15:28:35.879+01:00" updated-on="2017-02-03T16:07:46.032+01:00" revision="21" schemaVersion="2" xsi:noNamespaceSchemaLocation="../schema/ciSchema.xsd">
+    <sensor-assignment-profile-data>
+        <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="*" constructor="false" public-mod="true" protected-mod="false" private-mod="false" default-mod="false" class-name="com.jboss.dvd.*" superclass="false" interface="false" annotation="javax.ejb.Stateless"/>
+        <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="*" constructor="false" public-mod="true" protected-mod="false" private-mod="false" default-mod="false" class-name="com.jboss.dvd.*" superclass="false" interface="false" annotation="javax.ejb.Stateful"/>
+        <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="*" constructor="false" public-mod="true" protected-mod="false" private-mod="false" default-mod="false" class-name="org.apache.catalina.core.ApplicationDispatcher" superclass="false" interface="false"/>
+        <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="true" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="execute" constructor="false" public-mod="true" protected-mod="false" private-mod="false" default-mod="false" class-name="com.sun.faces.lifecycle.Phase" superclass="true" interface="false"/>
+        <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="searchTitle*" constructor="false" public-mod="false" protected-mod="false" private-mod="true" default-mod="false" class-name="com.jboss.dvd.seam.FullTextSearchAction" superclass="false" interface="false">
+            <context-captures>
+                <parameter-capture index="0" display-name="searchCriteria"/>
+            </context-captures>
+        </timer-method-sensor-assignment>
+        <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="submitOrder" constructor="false" public-mod="true" protected-mod="false" private-mod="false" default-mod="false" class-name="com.jboss.dvd.seam.CheckoutAction" superclass="false" interface="false">
+            <context-captures>
+                <return-capture display-name="trackingNumber">
+                    <paths>
+                        <path>trackingNumber</path>
+                    </paths>
+                </return-capture>
+            </context-captures>
+        </timer-method-sensor-assignment>
+        <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="invoke" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="org.apache.catalina.core.ApplicationDispatcher" superclass="false" interface="false"/>
+        <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="renderView" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="com.sun.facelets.FaceletViewHandler" superclass="false" interface="false"/>
+        <timer-method-sensor-assignment starts-invocation="false" min-invocation-duration="0" charting="false" sensor-config-class="rocks.inspectit.shared.cs.ci.sensor.method.impl.TimerSensorConfig" method-name="*" constructor="false" public-mod="true" protected-mod="true" private-mod="true" default-mod="true" class-name="com.sun.faces.renderkit.html_basic.TableRenderer" superclass="false" interface="false"/>
+        <exception-sensor-assignment class-name="com.jboss.dvd.*" superclass="false" interface="false"/>
+        <exception-sensor-assignment class-name="java.lang.NullPointerException" superclass="false" interface="false"/>
+    </sensor-assignment-profile-data>
+</profile>

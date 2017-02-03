@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<environment xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="6134f866-76f6-4433-b949-b3cb8acc8f69" name="DVD Store" description="Environment that contains the default inspectIT monitoring settings, all default profiles and the DVD Store specific profile." created-on="2017-02-03T15:24:21.058+01:00" updated-on="2017-02-03T16:08:58.528+01:00" revision="3" schemaVersion="2" xsi:noNamespaceSchemaLocation="../schema/ciSchema.xsd">
+    <time-sending-strategy-config time="5000"/>
+    <simple-buffer-strategy-config/>
+    <platform-sensor-configs>
+        <class-loading-sensor-config active="true"/>
+        <compilation-sensor-config active="true"/>
+        <cpu-sensor-config active="true"/>
+        <memory-sensor-config active="true"/>
+        <runtime-sensor-config active="true"/>
+        <system-sensor-config active="true"/>
+        <thread-sensor-config active="true"/>
+    </platform-sensor-configs>
+    <method-sensor-configs>
+        <connection-sensor-config/>
+        <http-sensor-config sessionCapture="false" string-length="500"/>
+        <invocation-sequence-sensor-config string-length="100"/>
+        <prepared-statement-parameter-sensor-config/>
+        <prepared-statement-sensor-config string-length="1000"/>
+        <statement-sensor-config string-length="1000"/>
+        <timer-sensor-config string-length="100"/>
+        <log4j-logging-sensor-config minLevel="WARN"/>
+    </method-sensor-configs>
+    <exception-sensor-config enhanced="false" string-length="500"/>
+    <jmx-loading-sensor-config active="true" forceMBeanServerCreation="false"/>
+    <profile-ids>
+        <profile-id>sql</profile-id>
+        <profile-id>exclude-classes</profile-id>
+        <profile-id>afc9a03a-f952-4842-8dcb-259e0c7d00f0</profile-id>
+        <profile-id>http</profile-id>
+    </profile-ids>
+    <classLoadingDelegation>true</classLoadingDelegation>
+</environment>
